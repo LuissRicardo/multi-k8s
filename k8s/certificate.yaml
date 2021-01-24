@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: luissricardo-com-tls
+spec:
+  secretName: luissricardo-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: luissricardo.com
+  dnsNames:
+    - luissricardo.com
+    - www.luissricardo.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - luissricardo.com
+          - www.luissricardo.com
