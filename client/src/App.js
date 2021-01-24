@@ -10,9 +10,9 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Fib calculator version KUBERNETES!</h1>
+          <h1 className="App-title">Fibonacci calculator</h1>
           <Link to="/">Home</Link>
-          <Link to="/otherpage">Other Page</Link>
+          <Link to="/otherpage">Don't click here</Link>
         </header>
         <div>
           <Route exact path='/' component={Fib} />
